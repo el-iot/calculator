@@ -29,7 +29,7 @@ function partitionComponents(expression) {
     let numberChain = "";
     for (let i = 0; i < expression.length; i++) {
         element = expression.substr(i, 1)
-        if (Number(element)) {
+        if (Number(element) || element == "0") {
             numberChain += element;
         } else {
             result.push(numberChain);
